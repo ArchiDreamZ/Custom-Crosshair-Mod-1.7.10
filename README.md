@@ -16,6 +16,5 @@ Longan Forge Development Environment，基于Gradle 7.0，Longan-Forge-Gradle-1.
 4. **有任何构建、部署问题或项目bug请发issue或者加QQ群。**
 5. **如果要对本项目进行商业化，请在Readme上方部Powered by指向本仓库地址，顺便点上star收藏本项目对开发者的支持，谢谢。**
 
-**链接：
 [![Java](https://img.shields.io/badge/Java-1.8-informational)](http://openjdk.java.net/)
 [![Discord](https://img.shields.io/discord/796913369177260052)](https://discord.gg/FmVPsapuEk)
