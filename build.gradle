@@ -101,7 +101,7 @@ mirrorstation {
 
 
 // MOD 版本信息 , 别忘写版本信息
-version = "0.8.3"
+version = "0.8.4"
 group= "com.sparkless101.customcrosshairmod"
 archivesBaseName = "Custom Crosshair 彼梦版"
 

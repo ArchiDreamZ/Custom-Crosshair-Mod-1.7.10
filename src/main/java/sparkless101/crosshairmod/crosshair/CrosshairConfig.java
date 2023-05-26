@@ -51,7 +51,7 @@ public class CrosshairConfig {
             FileWriter writer = new FileWriter(SAVE_DIRECTORY);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
             ArrayList<String> lines = new ArrayList<String>();
-            lines.add("# Custom Crosshair Mod v0.8.3");
+            lines.add("# Custom Crosshair Mod v0.8.4");
             lines.add("# Crosshair Config File");
             lines.add("# Made By Sparkless101");
             lines.add("# ------------------------------------");

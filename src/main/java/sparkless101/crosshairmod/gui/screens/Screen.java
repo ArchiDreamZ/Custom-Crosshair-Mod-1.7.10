@@ -74,7 +74,7 @@ extends GuiScreen {
         RenderManager.drawFilledRectangle(0.0f, 35.0f, this.width, 40.0f, GuiTheme.PRIMARY, true);
         RenderManager.drawString("Custom Crosshair Mod", 4, 15, new RGBA(0, 0, 0, 255));
         GL11.glScalef((float)0.5f, (float)0.5f, (float)1.0f);
-        RenderManager.drawString("v0.8.3", (4 + RenderManager.getTextWidth("Custom Crosshair Mod") + 4) * 2, 36, new RGBA(0, 0, 0, 255));
+        RenderManager.drawString("v0.8.4", (4 + RenderManager.getTextWidth("Custom Crosshair Mod") + 4) * 2, 36, new RGBA(0, 0, 0, 255));
         GL11.glScalef((float)2.0f, (float)2.0f, (float)1.0f);
     }
 

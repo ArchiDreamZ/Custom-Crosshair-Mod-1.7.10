@@ -32,27 +32,28 @@ extends Screen {
     private ElementButton button_editKey;
     private ElementButton button_project_mcForums;
     private ElementButton button_project_curseForge;
+    private ElementButton button_project_MCbaike;
     private ElementHeaderButton headerButton_return;
     private boolean isEditingKey;
     private String requestedLatestVersion;
 
     public void initGui() {
         this.isEditingKey = false;
-        String editKeyDisplayText = "Open GUI key: " + (String)CustomCrosshairMod.getCrosshairMod().getCrosshair().properties.keybind_gui.getType();
+        String editKeyDisplayText = "开启设置菜单的按键: " + (String)CustomCrosshairMod.getCrosshairMod().getCrosshair().properties.keybind_gui.getType();
         this.button_editKey = new ElementButton(this, editKeyDisplayText, 0, 0, RenderManager.getTextWidth(editKeyDisplayText) + 8, 25){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
                 ScreenSettings.this.isEditingKey = true;
-                this.setDisplayText("Press a button...");
+                this.setDisplayText("按下一个按钮...");
             }
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Change the key to open the customize crosshair menu.");
+                return Arrays.asList("更改打开自定义准星菜单的按键。");
             }
         };
-        this.button_project_mcForums = new ElementButton(this, "View MinecraftForum Thread", 0, 0, RenderManager.getTextWidth("View MinecraftForum Thread") + 8, 21){
+        this.button_project_mcForums = new ElementButton(this, "查看 MinecraftForum 帖子", 0, 0, RenderManager.getTextWidth("查看 MinecraftForum 帖子") + 8, 21){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -61,25 +62,38 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Navigate to the MinecraftForum thread.", "(Opens in a web browser).");
+                return Arrays.asList("链接到 MinecraftForum 帖子.", "(在浏览器中打开).");
             }
         };
-        this.button_project_curseForge = new ElementButton(this, "View CurseForge Project", 0, 0, RenderManager.getTextWidth("View CurseForge Project") + 8, 21){
+        this.button_project_curseForge = new ElementButton(this, "查看 CurseForge 页面", 0, 0, RenderManager.getTextWidth("查看 CurseForge 页面") + 8, 21){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
-                WebUtils.openInBrowser("https://www.curseforge.com/projects/242995/");
+                WebUtils.openInBrowser("https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod");
             }
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Navigate to the CurseForge Project.", "(Opens in a web browser).");
+                return Arrays.asList("链接到 CurseForge 页面.", "(在浏览器中打开).");
+            }
+        };
+        this.button_project_MCbaike = new ElementButton(this, "查看 MC百科 页面", 0, 0, RenderManager.getTextWidth("查看 MC百科 页面") + 8, 21){
+
+            @Override
+            public void mouseClicked(int mouseX, int mouseY) {
+                WebUtils.openInBrowser("https://www.mcmod.cn/class/1047.html");
+            }
+
+            @Override
+            public List<String> getHelpText() {
+                return Arrays.asList("链接到 MC百科 页面.", "(在浏览器中打开).");
             }
         };
         this.elementList.clear();
         this.elementList.add(this.button_editKey);
         this.elementList.add(this.button_project_mcForums);
         this.elementList.add(this.button_project_curseForge);
+        this.elementList.add(this.button_project_MCbaike);
         int elementY = 44;
         for (Object element : this.elementList) {
             ((ElementBase)element).setPosition(19, elementY);
@@ -88,7 +102,7 @@ extends Screen {
             this.helpButtonList.add(helpButton);
             elementY += ((ElementBase)element).getHeight() + 4;
         }
-        this.headerButton_return = new ElementHeaderButton(this, "< Return", 0, 0, 15){
+        this.headerButton_return = new ElementHeaderButton(this, "< 返回", 0, 0, 15){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -152,13 +166,13 @@ extends Screen {
         String message;
         super.drawScreen(mouseX, mouseY, partialTicks);
         this.setToolTip(null);
-        if (this.requestedLatestVersion != null && !this.requestedLatestVersion.equals("0.8.3")) {
-            message = "Detected new latest version: v" + this.requestedLatestVersion + ".";
+        if (this.requestedLatestVersion != null && !this.requestedLatestVersion.equals("0.8.4")) {
+            message = "检测到新的最新版本: v" + this.requestedLatestVersion + ".";
             RenderManager.drawString(message, this.width - RenderManager.getTextWidth(message) - 5, this.height - 41, new RGBA(255, 180, 0, 255));
         }
-        message = "Custom Crosshair Mod v0.8.3";
+        message = "Custom Crosshair Mod v0.8.4";
         RenderManager.drawString(message, this.width - RenderManager.getTextWidth(message) - 5, this.height - 28, new RGBA(0, 0, 0, 255));
-        message = "Made by Sparkless101";
+        message = "Made by Sparkless101 and 彼梦";
         RenderManager.drawString(message, this.width - RenderManager.getTextWidth(message) - 5, this.height - 15, new RGBA(0, 0, 0, 255));
         for (ElementBase element : this.elementList) {
             element.drawElement(mouseX, mouseY);
