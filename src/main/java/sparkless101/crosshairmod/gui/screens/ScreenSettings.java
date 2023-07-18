@@ -81,7 +81,7 @@ extends Screen {
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
-                WebUtils.openInBrowser("https://www.mcmod.cn/class/1047.html");
+                WebUtils.openInBrowser("https://www.mcmod.cn/class/10464.html");
             }
 
             @Override
