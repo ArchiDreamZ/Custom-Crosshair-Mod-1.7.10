@@ -7,10 +7,11 @@
 
 [Longan Forge Development Environment](https://github.com/CyanKoton/CyanKoton-ForgeGradle-1.2)，是一款现代的1.7.10模组开发环境，基于Gradle 7.0，Longan-Forge-Gradle-1.2，开发的LonganForge，使用了Aliyun的Maven储存库对比原来的ForgeMaven
 
-国内访问速度大幅提升，Gradle7.0更加简单轻便，支持更多拓展
+国内访问速度大幅提升，Gradle7.0更加简单轻便，支持更多拓展。
+
 **支持使用Kotlin,Scala等JVM语言开发Mod**
 
- **有任何构建、部署问题或项目bug请发issue或者加QQ群。**
+ **有任何构建、部署问题或项目bug请发issue或者加QQ群（483315828）。**
 
 [![Java](https://img.shields.io/badge/Java-1.8-informational)](http://openjdk.java.net/)
 [![Discord](https://img.shields.io/discord/796913369177260052)](https://discord.gg/FmVPsapuEk)
