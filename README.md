@@ -3,6 +3,12 @@
 
 并且该模组的文本都是写死在代码中的，没有语言文件，于是我在代码层面将其汉化。
 
+## 创建原因
+
+之前在做魔戒整合包，看上了这模组的动态拉弓专心功能，有点骑砍的味道，但用了才知道只支持原版弓，而且没有语言文件没法汉化，于是就重新构建了一份。
+
+但是现在只是改成了兼容继承了原版弓的物品，依然有很多像投枪、飞斧之类的物品不兼容，不知道有什么方法能改成兼容所有一右键会出现FOV视野变化的物品，希望有大佬能帮忙。
+
 ## 所使用的开发环境
 
 [Longan Forge Development Environment](https://github.com/CyanKoton/CyanKoton-ForgeGradle-1.2)，是一款现代的1.7.10模组开发环境，基于Gradle 7.0，Longan-Forge-Gradle-1.2，开发的LonganForge，使用了Aliyun的Maven储存库对比原来的ForgeMaven
