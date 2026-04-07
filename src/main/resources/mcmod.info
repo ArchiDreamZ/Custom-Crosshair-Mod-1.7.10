@@ -1,13 +1,13 @@
 [
     {
         "modid": "customcrosshairmod",
-        "name": "Custom Crosshair - ±À√Œ∞Ê",
+        "name": "Custom Crosshair - \\u5f7c\\u68a6\\u7248",
         "description": "Mod that changes the style of the crosshair.",
         "version": "${version}",
         "mcversion": "1.7.10",
         "url": "",
         "updateUrl": "",
-        "authors": ["Sparkless101"°¢"±À√Œ"],
+        "authors": ["Sparkless101", "\\u5f7c\\u68a6"],
         "credits": "Sparkless101",
         "logoFile": "",
         "screenshots": [],

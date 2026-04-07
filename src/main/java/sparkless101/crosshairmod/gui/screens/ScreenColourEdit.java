@@ -32,7 +32,7 @@ extends Screen {
     private String title;
 
     public ScreenColourEdit(RGBA colour) {
-        this(colour, "Edit Colour...");
+        this(colour, "编辑颜色...");
     }
 
     public ScreenColourEdit(RGBA colour, String text) {
@@ -42,7 +42,7 @@ extends Screen {
 
     public void initGui() {
         this.label_title = new ElementLabel(this, this.title, 0, 0);
-        this.slider_red = new ElementSlider(this, "Red", 0, 0, 255, 11, 0, 255){
+        this.slider_red = new ElementSlider(this, "红", 0, 0, 255, 11, 0, 255){
 
             @Override
             public void onValueChanged() {
@@ -51,12 +51,12 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Changes how red the colour is.");
+                return Arrays.asList("改变颜色的红色程度。");
             }
         };
         this.slider_red.setValue(this.colour.getRed());
         this.slider_red.setBoxColour(new RGBA(255, 0, 0, 255));
-        this.slider_green = new ElementSlider(this, "Green", 0, 0, 255, 11, 0, 255){
+        this.slider_green = new ElementSlider(this, "绿", 0, 0, 255, 11, 0, 255){
 
             @Override
             public void onValueChanged() {
@@ -65,12 +65,12 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Changes how green the colour is.");
+                return Arrays.asList("改变颜色的绿色程度。");
             }
         };
         this.slider_green.setValue(this.colour.getGreen());
         this.slider_green.setBoxColour(new RGBA(0, 255, 0, 255));
-        this.slider_blue = new ElementSlider(this, "Blue", 0, 0, 255, 11, 0, 255){
+        this.slider_blue = new ElementSlider(this, "蓝", 0, 0, 255, 11, 0, 255){
 
             @Override
             public void onValueChanged() {
@@ -79,12 +79,12 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Changes how blue the colour is.");
+                return Arrays.asList("改变颜色的蓝色程度。");
             }
         };
         this.slider_blue.setValue(this.colour.getBlue());
         this.slider_blue.setBoxColour(new RGBA(0, 0, 255, 255));
-        this.slider_opacity = new ElementSlider(this, "Opacity", 0, 0, 255, 11, 0, 255){
+        this.slider_opacity = new ElementSlider(this, "不透明度", 0, 0, 255, 11, 0, 255){
 
             @Override
             public void onValueChanged() {
@@ -93,7 +93,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("Changes the opacity of the colour.");
+                return Arrays.asList("改变颜色的不透明度");
             }
         };
         this.slider_opacity.setValue(this.colour.getOpacity());
@@ -114,7 +114,7 @@ extends Screen {
             elementY += ((ElementBase)element).getHeight() + 4;
             contentHeight += ((ElementBase)element).getHeight() + 4;
         }
-        this.headerButton_return = new ElementHeaderButton(this, "< Return", 0, 0, 15){
+        this.headerButton_return = new ElementHeaderButton(this, "< 返回", 0, 0, 15){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {

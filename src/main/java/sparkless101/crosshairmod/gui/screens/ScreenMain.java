@@ -70,7 +70,7 @@ extends Screen {
         this.crosshair = CustomCrosshairMod.getCrosshairMod().getCrosshair();
         this.panel_container = new ElementPanel(this, 0, 0, this.width, this.height - 40, true);
         this.panel_container.setPosition(0, 40);
-        this.tickBox_mod_enabled = new ElementTickBox(this, "原版准心", 0, 0){
+        this.tickBox_mod_enabled = new ElementTickBox(this, "禁用原版准星", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -81,11 +81,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("启用或禁用原版准心。");
+                return Arrays.asList("启用或禁用原版准星的显示。");
             }
         };
         this.tickBox_mod_enabled.setChecked((Boolean)this.crosshair.properties.mod_enabled.getType());
-        this.tickBox_visible_default = new ElementTickBox(this, "默认可见", 0, 0){
+        this.tickBox_visible_default = new ElementTickBox(this, "默认显示准星", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -95,11 +95,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("显示或隐藏准心");
+                return Arrays.asList("默认显示或者隐藏准星");
             }
         };
         this.tickBox_visible_default.setChecked((Boolean)this.crosshair.properties.visible_default.getType());
-        this.tickBox_visible_hiddenGui = new ElementTickBox(this, "隐藏GUI时可见", 0, 0){
+        this.tickBox_visible_hiddenGui = new ElementTickBox(this, "隐藏GUI时可见(F1)", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -109,11 +109,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("隐藏 GUI（F1 模式）时显示或隐藏准心。");
+                return Arrays.asList("隐藏GUI时(F1)显示或隐藏准星。");
             }
         };
         this.tickBox_visible_hiddenGui.setChecked((Boolean)this.crosshair.properties.visible_hiddenGui.getType());
-        this.tickBox_visible_debug = new ElementTickBox(this, "在调试 UI 中可见", 0, 0){
+        this.tickBox_visible_debug = new ElementTickBox(this, "在显示Debug信息时可见(F3)", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -123,11 +123,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("在调试 UI（F3 模式）中显示或隐藏准心。");
+                return Arrays.asList("在显示Debug信息时(F3)显示或隐藏准星。");
             }
         };
         this.tickBox_visible_debug.setChecked((Boolean)this.crosshair.properties.visible_debug.getType());
-        this.tickbox_visible_thirdPerson = new ElementTickBox(this, "第三人称可见", 0, 0){
+        this.tickbox_visible_thirdPerson = new ElementTickBox(this, "在第三人称模式中可见", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -137,7 +137,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("在第三人称模式下显示或隐藏准心。");
+                return Arrays.asList("在第三人称模式下显示或隐藏准星。");
             }
         };
         this.tickbox_visible_thirdPerson.setChecked((Boolean)this.crosshair.properties.visible_thirdPerson.getType());
@@ -151,7 +151,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("在准心周围绘制轮廓线。");
+                return Arrays.asList("在准星外围绘制轮廓线。");
             }
         };
         this.tickBox_outline_enabled.setChecked((Boolean)this.crosshair.properties.outline_enabled.getType());
@@ -169,7 +169,7 @@ extends Screen {
             }
         };
         this.tickBox_dot_enabled.setChecked((Boolean)this.crosshair.properties.dot_enabled.getType());
-        this.tickBox_dynamic_bow_enabled = new ElementTickBox(this, "启用动态拉弓准心", 0, 0){
+        this.tickBox_dynamic_bow_enabled = new ElementTickBox(this, "启用动态拉弓准星", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -179,11 +179,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("当使用弓时，准心会动态表示蓄力时间");
+                return Arrays.asList("当使用弓时，准星会动态表示蓄力时间");
             }
         };
         this.tickBox_dynamic_bow_enabled.setChecked((Boolean)this.crosshair.properties.dynamic_bow_enabled.getType());
-        this.tickBox_highlight_hostile_enabled = new ElementTickBox(this, "高亮敌对生物", 0, 0){
+        this.tickBox_highlight_hostile_enabled = new ElementTickBox(this, "启用敌对生物高亮", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -197,7 +197,7 @@ extends Screen {
             }
         };
         this.tickBox_highlight_hostile_enabled.setChecked((Boolean)this.crosshair.properties.highlight_hostile_enabled.getType());
-        this.tickBox_highlight_passive_enabled = new ElementTickBox(this, "高亮被动生物", 0, 0){
+        this.tickBox_highlight_passive_enabled = new ElementTickBox(this, "启用被动生物高亮", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -211,7 +211,7 @@ extends Screen {
             }
         };
         this.tickBox_highlight_passive_enabled.setChecked((Boolean)this.crosshair.properties.highlight_passive_enabled.getType());
-        this.tickBox_highlight_player_enabled = new ElementTickBox(this, "高亮玩家", 0, 0){
+        this.tickBox_highlight_player_enabled = new ElementTickBox(this, "启用玩家高亮", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -225,7 +225,7 @@ extends Screen {
             }
         };
         this.tickBox_highlight_player_enabled.setChecked((Boolean)this.crosshair.properties.highlight_player_enabled.getType());
-        this.tickBox_rainbow_enabled = new ElementTickBox(this, "启用彩虹准心", 0, 0){
+        this.tickBox_rainbow_enabled = new ElementTickBox(this, "启用彩虹变色准星", 0, 0){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
@@ -235,53 +235,53 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("准心颜色将变为彩虹！");
+                return Arrays.asList("准星颜色将变为彩虹！");
             }
         };
         this.tickBox_rainbow_enabled.setChecked((Boolean)this.crosshair.properties.rainbow_enabled.getType());
-        this.colourEdit_crosshair_base = new ElementColourEdit(this, "准心底色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.crosshair_colour.getType()){
+        this.colourEdit_crosshair_base = new ElementColourEdit(this, "准星颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.crosshair_colour.getType()){
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的基础颜色。");
+                return Arrays.asList("更改准星的基础颜色。");
             }
         };
         this.colourEdit_outline = new ElementColourEdit(this, "轮廓线颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.outline_colour.getType()){
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的轮廓线颜色。");
+                return Arrays.asList("更改准星的轮廓线颜色。");
             }
         };
         this.colourEdit_dot = new ElementColourEdit(this, "中心点颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.dot_colour.getType()){
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的中心点颜色。");
+                return Arrays.asList("更改准星的中心点颜色。");
             }
         };
-        this.colourEdit_highlight_hostile = new ElementColourEdit(this, "高亮敌对生物颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.highlight_hostile_colour.getType()){
+        this.colourEdit_highlight_hostile = new ElementColourEdit(this, "敌对生物高亮颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.highlight_hostile_colour.getType()){
 
             @Override
             public List<String> getHelpText() {
                 return Arrays.asList("更改敌对生物的高亮显示颜色。");
             }
         };
-        this.colourEdit_highlight_passive = new ElementColourEdit(this, "高亮被动生物颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.highlight_passive_colour.getType()){
+        this.colourEdit_highlight_passive = new ElementColourEdit(this, "被动生物高亮颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.highlight_passive_colour.getType()){
 
             @Override
             public List<String> getHelpText() {
                 return Arrays.asList("更改被动生物的高亮显示颜色。");
             }
         };
-        this.colourEdit_highlight_player = new ElementColourEdit(this, "高亮玩家颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.highlight_player_colour.getType()){
+        this.colourEdit_highlight_player = new ElementColourEdit(this, "玩家高亮颜色", 0, 0, 21, 21, (RGBA)this.crosshair.properties.highlight_player_colour.getType()){
 
             @Override
             public List<String> getHelpText() {
                 return Arrays.asList("更改玩家的高亮显示颜色。");
             }
         };
-        this.slider_crosshair_type = new ElementSlider(this, "Type", 0, 0, 120, 11, 0, 5){
+        this.slider_crosshair_type = new ElementSlider(this, "样式", 0, 0, 120, 11, 0, 5){
 
             @Override
             public void onValueChanged() {
@@ -290,11 +290,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心类型", "[0 = 十字]", "[1 = 圆]", "[2 = 方]", "[3 = 原版]", "[4 = 箭头]");
+                return Arrays.asList("更改准星样式", "[0 = 十字]", "[1 = 圆形]", "[2 = 方形]", "[3 = 原版]", "[4 = 箭头]", "[5 = 三角形]");
             }
         };
         this.slider_crosshair_type.setValue(((CrosshairType)((Object)this.crosshair.properties.crosshair_type.getType())).getValue());
-        this.slider_crosshair_width = new ElementSlider(this, "宽", 0, 0, 150, 11, 1, 100){
+        this.slider_crosshair_width = new ElementSlider(this, "宽度", 0, 0, 150, 11, 1, 100){
 
             @Override
             public void onValueChanged() {
@@ -303,11 +303,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的水平宽度。");
+                return Arrays.asList("更改准星的水平宽度。");
             }
         };
         this.slider_crosshair_width.setValue((Integer)this.crosshair.properties.crosshair_width.getType());
-        this.slider_crosshair_height = new ElementSlider(this, "高", 0, 0, 150, 11, 1, 100){
+        this.slider_crosshair_height = new ElementSlider(this, "高度", 0, 0, 150, 11, 1, 100){
 
             @Override
             public void onValueChanged() {
@@ -316,7 +316,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的垂直高度。");
+                return Arrays.asList("更改准星的垂直高度。");
             }
         };
         this.slider_crosshair_height.setValue((Integer)this.crosshair.properties.crosshair_height.getType());
@@ -329,7 +329,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的间距。");
+                return Arrays.asList("更改准星的间距。");
             }
         };
         this.slider_crosshair_gap.setValue((Integer)this.crosshair.properties.crosshair_gap.getType());
@@ -342,7 +342,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的厚度。");
+                return Arrays.asList("更改准星的厚度。");
             }
         };
         this.slider_crosshair_thickness.setValue((Integer)this.crosshair.properties.crosshair_thickness.getType());
@@ -355,11 +355,11 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改准心的旋转角度。");
+                return Arrays.asList("更改准星的旋转角度。");
             }
         };
         this.slider_crosshair_rotation.setValue((Integer)this.crosshair.properties.crosshair_rotation.getType());
-        this.slider_rainbow_speed = new ElementSlider(this, "彩虹速度", 0, 0, 150, 11, 1, 1000){
+        this.slider_rainbow_speed = new ElementSlider(this, "彩虹变色速度", 0, 0, 150, 11, 1, 1000){
 
             @Override
             public void onValueChanged() {
@@ -368,7 +368,7 @@ extends Screen {
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改彩虹准心的颜色变化速度。");
+                return Arrays.asList("更改彩虹准星的颜色变化速度。");
             }
         };
         this.slider_rainbow_speed.setValue((Integer)this.crosshair.properties.rainbow_speed.getType());

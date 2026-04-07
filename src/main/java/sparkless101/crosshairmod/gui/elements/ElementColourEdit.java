@@ -42,7 +42,7 @@ extends ElementBase {
     @Override
     public void mouseClicked(int mouseX, int mouseY) {
         if (this.isMouseOver(mouseX, mouseY)) {
-            Minecraft.getMinecraft().displayGuiScreen((GuiScreen)new ScreenColourEdit(this.editColour, "Edit " + this.getDisplayText() + "..."));
+            Minecraft.getMinecraft().displayGuiScreen((GuiScreen)new ScreenColourEdit(this.editColour, "更改" + this.getDisplayText() + "..."));
         }
     }
 }

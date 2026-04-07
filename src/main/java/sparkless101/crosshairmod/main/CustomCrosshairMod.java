@@ -49,10 +49,10 @@ import sparkless101.crosshairmod.crosshair.render.CrosshairRenderer;
 import sparkless101.crosshairmod.gui.screens.ScreenMain;
 import sparkless101.crosshairmod.utils.WebUtils;
 
-@Mod(modid="customcrosshairmod", version="0.8.4")
+@Mod(modid="customcrosshairmod", version="0.8.5")
 public class CustomCrosshairMod {
     public static final String NAME = "Custom Crosshair Mod";
-    public static final String VERSION = "0.8.4";
+    public static final String VERSION = "0.8.5";
     public static final String MCVERSION = "1.7.10-forge";
     public static final String MCFORUM_URL = "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2637819/";
     public static final String CURSEFORGE_URL = "https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod";

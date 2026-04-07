@@ -39,18 +39,18 @@ extends Screen {
 
     public void initGui() {
         this.isEditingKey = false;
-        String editKeyDisplayText = "开启设置菜单的按键: " + (String)CustomCrosshairMod.getCrosshairMod().getCrosshair().properties.keybind_gui.getType();
+        String editKeyDisplayText = "开启配置页面的按键: " + (String)CustomCrosshairMod.getCrosshairMod().getCrosshair().properties.keybind_gui.getType();
         this.button_editKey = new ElementButton(this, editKeyDisplayText, 0, 0, RenderManager.getTextWidth(editKeyDisplayText) + 8, 25){
 
             @Override
             public void mouseClicked(int mouseX, int mouseY) {
                 ScreenSettings.this.isEditingKey = true;
-                this.setDisplayText("按下一个按钮...");
+                this.setDisplayText("按下一个按键...");
             }
 
             @Override
             public List<String> getHelpText() {
-                return Arrays.asList("更改打开自定义准星菜单的按键。");
+                return Arrays.asList("更改开启自定义准星配置页面的按键。");
             }
         };
         this.button_project_mcForums = new ElementButton(this, "查看 MinecraftForum 帖子", 0, 0, RenderManager.getTextWidth("查看 MinecraftForum 帖子") + 8, 21){
@@ -166,11 +166,11 @@ extends Screen {
         String message;
         super.drawScreen(mouseX, mouseY, partialTicks);
         this.setToolTip(null);
-        if (this.requestedLatestVersion != null && !this.requestedLatestVersion.equals("0.8.4")) {
+        if (this.requestedLatestVersion != null && !this.requestedLatestVersion.equals("0.8.5")) {
             message = "检测到新的最新版本: v" + this.requestedLatestVersion + ".";
             RenderManager.drawString(message, this.width - RenderManager.getTextWidth(message) - 5, this.height - 41, new RGBA(255, 180, 0, 255));
         }
-        message = "Custom Crosshair Mod v0.8.4";
+        message = "Custom Crosshair Mod v0.8.5";
         RenderManager.drawString(message, this.width - RenderManager.getTextWidth(message) - 5, this.height - 28, new RGBA(0, 0, 0, 255));
         message = "Made by Sparkless101 and 彼梦";
         RenderManager.drawString(message, this.width - RenderManager.getTextWidth(message) - 5, this.height - 15, new RGBA(0, 0, 0, 255));
